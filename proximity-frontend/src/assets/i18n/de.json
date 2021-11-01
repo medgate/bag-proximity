@@ -1,0 +1,94 @@
+{
+  "header": {
+    "title": "SwissCovid Leitfaden"
+  },
+  "footer": {
+    "office": "©2020 Bundesamt für Gesundheit",
+    "legal": "Rechtliche Grundlagen",
+    "imprint": "Impressum",
+    "link": {
+      "office": "https://www.bag.admin.ch/bag/de/home.html",
+      "legal": "https://bag-coronavirus.ch/rechtliche-grundlagen/",
+      "imprint": "https://bag-coronavirus.ch/impressum/"
+    }
+  },
+  "errors": {
+    "title": "SwissCovid Leitfaden",
+    "back": "Zurück",
+    "notFound": "Seite nicht gefunden",
+    "forbidden": "Verboten",
+    "unexpected": "Ein unerwarteter Fehler ist aufgetreten. Bitte wiederholen Sie."
+  },
+  "intro": {
+    "title": "SwissCovid Leitfaden",
+    "description": "Beantworten Sie alle Fragen im Leitfaden. Dann werden Sie an die entsprechend zuständige Stelle verwiesen.",
+    "start": "Leitfaden starten"
+  },
+  "screening": {
+    "next": "Weiter",
+    "back": "Zurück",
+    "restart": "Test wiederholen",
+    "bag": "Zur BAG-Webseite"
+  },
+  "recommendation": {
+    "title": "Hotline-ID:",
+    "description": "Bitte geben Sie die obige ID an, wenn Sie die Hotline anrufen, damit wir auf Ihre Antworten zugreifen und Zeit sparen können.",
+    "descriptionEmail": "Bitte geben Sie die obige ID in Ihrer E-Mail an, damit wir auf Ihre Antworten zugreifen und Zeit sparen können."
+  },
+  "summary": {
+    "title": "Zusammenfassung der Angaben im SwissCovid Leitfaden",
+    "reset": "Zurücksetzen",
+    "recommendation": "Empfehlung",
+    "exchanges": "Fragen",
+    "recommendationCode": {
+      "label": "Hotline-ID",
+      "required": "Hotline-ID ist erforderlich",
+      "invalid": "Hotline-ID muss alphanumerisch und 4 Zeichen lang sein",
+      "notFound": "Für den angegebenen Hotline-ID wurde kein Austausch gefunden",
+      "expired": "Hotline-ID abgelaufen: die Vorführung ist älter als 24 Stunden"
+    }
+  },
+  "profile": {
+    "title": "Persönliche Angaben",
+    "description": "Geben Sie Ihr Geschlecht, Alter und Ihren Kanton. Je nach Ergebnis erhalten Sie Ihre kantonalen Kontaktadressen angezeigt.",
+    "button": "Weiter",
+    "canton": {
+      "label": "Kanton",
+      "required": "Der Kanton ist erforderlich.",
+      "invalid": "Bitte schreiben Sie den Kantonsnamen aus."
+    },
+    "age": {
+      "label": "Alter",
+      "required": "Bitte geben Sie Ihr Alter an.",
+      "invalid": "Alter muss zwischen 0 und 120 sein.",
+      "years": "Jahre"
+    },
+    "gender": {
+      "label": "Geschlecht",
+      "male": "Männlich",
+      "female": "Weiblich",
+      "other": "Andere",
+      "required": "Das Geschlecht ist erforderlich."
+    },
+    "contactDate": {
+      "label": "Kontaktdaten",
+      "notAvailable": "Keine Kontaktdaten verfügbar.",
+      "question": "Möchten Sie die oben genannten Kontaktdaten teilen?",
+      "description": "Falls ein Anruf bei der Hotline erforderlich ist, können unsere Mitarbeiter Ihnen schneller helfen.",
+      "yes": "Ja",
+      "no": "Nein"
+    }
+  },
+  "hearingImpaired": {
+    "title": "Unterstützung für hörgeschädigte Menschen",
+    "description": "Im Auftrag des BAG unterstützt Medgate Hörgeschädigte via E-Mail.",
+    "email": "covid-support@medgate.ch"
+  },
+  "language": {
+    "label": "Sprache",
+    "german": "Deutsch",
+    "french": "Français",
+    "italian": "Italiano",
+    "english": "English"
+  }
+}

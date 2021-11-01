@@ -1,0 +1,94 @@
+{
+  "header": {
+    "title": "Guida SwissCovid"
+  },
+  "footer": {
+    "office": "©2020 Ufficio federale della sanità pubblica UFSP",
+    "legal": "Basi legali",
+    "imprint": "Colophon",
+    "link": {
+      "office": "https://www.bag.admin.ch/bag/it/home.html",
+      "legal": "https://ufsp-coronavirus.ch/basi-legali/",
+      "imprint": "https://ufsp-coronavirus.ch/colophon/"
+    }
+  },
+  "errors": {
+    "title": "Guida SwissCovid",
+    "back": "Indietro",
+    "notFound": "Pagina non trovata",
+    "forbidden": "Vietato",
+    "unexpected": "Si è verificato un errore inaspettato. Si prega di riprovare."
+  },
+  "intro": {
+    "title": "Guida SwissCovid",
+    "description": "Dopo aver risposto a tutte le domande della guida sarai indirizzato verso il servizio competente.",
+    "start": "Avvio dell’autovalutazione"
+  },
+  "screening": {
+    "next": "Avanti",
+    "back": "Indietro",
+    "restart": "Ripetere il check",
+    "bag": "Sito web dell'UFSP"
+  },
+  "recommendation": {
+    "title": "ID hotline:",
+    "description": "Quando chiami la hotline, inserisci il suddetto ID per permetterci di accedere alle tue risposte e risparmiare tempo.",
+    "descriptionEmail": "Si prega di indicare l'ID di cui sopra nella tua e-mail in modo che siamo in grado di accedere alle tue risposte e risparmiare tempo."
+  },
+  "summary": {
+    "title": "Sintesi delle informazioni contenute nelle direttive SwissCovid",
+    "reset": "Resetta",
+    "recommendation": "Raccomandazione",
+    "exchanges": "Scambio",
+    "recommendationCode": {
+      "label": "ID Hotline",
+      "required": "Il ID Hotline è obbligatorio",
+      "invalid": "Il ID Hotline deve essere alfanumerico e lungo 4 caratteri",
+      "notFound": "Nessuna piattaforma trovata per il ID Hotline fornito",
+      "expired": "ID Hotline scaduto: lo screening è più vecchio di 24 ore"
+    }
+  },
+  "profile": {
+    "title": "Dati personali",
+    "description": "Indica il sesso, l’età e il Cantone. In base al risultato saranno visualizzati i tuoi indirizzi di contatto cantonali.",
+    "button": "Avanti",
+    "canton": {
+      "label": "Cantone",
+      "required": "Il cantone è richiesto.",
+      "invalid": "Il nome del cantone deve essere scritto per esteso."
+    },
+    "age": {
+      "label": "Età",
+      "required": "Immettere l’età.",
+      "invalid": "Il dato deve essere compreso fra 0 e 120.",
+      "years": "anni"
+    },
+    "gender": {
+      "label": "Sesso",
+      "male": "Maschile",
+      "female": "Femminile",
+      "other": "Altro",
+      "required": "È necessario indicare il sesso."
+    },
+    "contactDate": {
+      "label": "Date di contatto",
+      "notAvailable": "Nessuna data di contatto disponibile.",
+      "question": "Vuoi condividere le date di contatto sopra?",
+      "description": "Nel caso in cui sia necessaria una chiamata alla hotline, questo permetterà ai nostri collaboratori di aiutarti più velocemente.",
+      "yes": "Sì",
+      "no": "No"
+    }
+  },
+  "hearingImpaired": {
+    "title": "Supporto per le persone con problemi di udito",
+    "description": "Su incarico dell'UFSP, Medgate sostiene le persone con problemi di udito via e-mail.",
+    "email": "covid-support@medgate.ch"
+  },
+  "language": {
+    "label": "Lingua",
+    "german": "Deutsch",
+    "french": "Français",
+    "italian": "Italiano",
+    "english": "English"
+  }
+}

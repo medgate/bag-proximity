@@ -1,0 +1,92 @@
+<bag-header-intro></bag-header-intro>
+
+<bag-unexpected-error *ngIf="error"
+                      [error]="error">
+</bag-unexpected-error>
+<main>
+  <form [formGroup]="summaryForm">
+
+    <h1>{{ 'summary.title' | translate }}</h1>
+
+    <mat-form-field [floatLabel]="'always'" class="input-block">
+      <mat-label class="label-color">
+        {{ 'summary.recommendationCode.label' | translate }}
+      </mat-label>
+      <input type="text"
+             matInput
+             required
+             formControlName="recommendationCode"
+             oninput="this.value = this.value.toUpperCase()"
+             [readonly]="loading"
+             (input)="updateSummaryIfValidCode()"
+             #recommendationCode>
+      <mat-error *ngIf="summaryForm.get('recommendationCode').hasError('required')
+                    && (summaryForm.get('recommendationCode')?.dirty || summaryForm.get('recommendationCode')?.touched)">
+        {{ 'summary.recommendationCode.required' | translate }}
+      </mat-error>
+      <mat-error *ngIf="(summaryForm.get('recommendationCode').hasError('minlength') || summaryForm.get('recommendationCode').hasError('maxlength'))
+                    && !summaryForm.get('recommendationCode').hasError('required')
+                    && (summaryForm.get('recommendationCode')?.dirty || summaryForm.get('recommendationCode')?.touched)">
+        {{ 'summary.recommendationCode.invalid' | translate }}
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+  <div *ngIf="recommendationCodeNotFound" class="recommendation-code-not-found">
+    {{ 'summary.recommendationCode.notFound' | translate }}
+  </div>
+
+  <div *ngIf="recommendationExpired" class="recommendation-code-not-found">
+    {{ 'summary.recommendationCode.expired' | translate }}
+  </div>
+
+  <div *ngIf="!recommendationCodeNotFound && !recommendationExpired && conversationSummary">
+    <h2> {{ 'profile.title' | translate }} </h2>
+    {{ 'profile.age.label' | translate }}: {{ conversationSummary.userProfile.age }}<br>
+    {{ 'profile.gender.label' | translate }}:
+    <span *ngIf="conversationSummary.userProfile.gender === gender.FEMALE">
+      {{ 'profile.gender.female' | translate }}
+    </span>
+    <span *ngIf="conversationSummary.userProfile.gender === gender.MALE">
+      {{ 'profile.gender.male' | translate }}
+    </span>
+    <span *ngIf="conversationSummary.userProfile.gender === gender.OTHER">
+      {{ 'profile.gender.other' | translate }}
+    </span>
+    <br>
+    {{ 'profile.canton.label' | translate }}: {{ canton.name }}<br><br>
+    
+    <h2>{{ 'profile.contactDate.label' | translate }}</h2>
+    <div *ngIf="conversationSummary.userProfile.contactDates.length">
+      <ul>
+        <li *ngFor="let contactDate of conversationSummary.userProfile.contactDates">
+          {{ contactDate | date: 'dd.MM.yyyy' }}
+        </li>
+      </ul>
+    </div>
+    
+
+    <div *ngIf="!conversationSummary.userProfile.contactDates.length">
+      {{ 'profile.contactDate.notAvailable' | translate }}
+    </div>
+
+    <br>
+
+    <h2>{{ 'summary.exchanges' | translate }}</h2>
+
+    <div *ngFor="let exchange of conversationSummary.exchanges">
+      <bag-exchange [questionNode]="exchange.node"
+                     [answer]="exchange.answer">
+      </bag-exchange>
+    </div>
+
+    <h2>{{ 'summary.recommendation' | translate }}</h2>
+
+    <bag-recommendation-provided [recommendation]="conversationSummary.recommendation"
+                                 (reset)="resetSummary()">
+    </bag-recommendation-provided>
+  </div>
+</main>
+
+<bag-footer *ngIf="!loading">
+</bag-footer>

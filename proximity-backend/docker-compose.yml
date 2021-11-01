@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+
+  mssql:
+    image: ${REGISTRY:-medgatepmsacrdetst.azurecr.io}/bag-corona/bag-backend-mssql:${TAG:-develop}
+    build: mssql
+
+  bag-backend:
+    image: ${REGISTRY:-medgatepmsacrdetst.azurecr.io}/bag-corona/bag-backend:${TAG:-develop}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - mssql
+
+  bag-frontend:
+    image: ${REGISTRY:-medgatepmsacrdetst.azurecr.io}/bag-corona/bag-frontend:develop

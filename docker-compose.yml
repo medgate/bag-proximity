@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  mssql:
+    image: ${REGISTRY:-medgatepmsacrdetst.azurecr.io}/bag-corona/proximity-mssql:develop
+    build: mssql
+      
+  proximity-backend:
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://mssql;databaseName=proximity
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: Pass@word
+    image: ${REGISTRY:-medgatepmsacrdetst.azurecr.io}/bag-corona/proximity-backend:${TAG:-develop}
+    build:
+      context: ./proximity-backend
+      dockerfile: ./Dockerfile
+    depends_on:
+      - mssql
+      
+  proximity-frontend:
+    image: ${REGISTRY:-medgatepmsacrdetst.azurecr.io}/bag-corona/proximity-frontend:${TAG:-develop}
+    build:
+      context: ./proximity-frontend
+      dockerfile: ./Dockerfile
+    depends_on:
+      - proximity-backend

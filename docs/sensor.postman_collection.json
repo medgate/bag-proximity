@@ -1,0 +1,1138 @@
+{
+	"info": {
+		"_postman_id": "86e5075f-e961-40d2-8db1-cb0277175a59",
+		"name": "Medgate Sensor",
+		"description": "Receive and display medical data from IoT medical devices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Devices",
+			"item": [
+				{
+					"name": "Medisanté",
+					"item": [
+						{
+							"name": "Simulate Medisanté data PUSHed from devices: BODY WEIGHT",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"metadata\":{\r\n      \"correlationId\":\"21eae806-e60c-4d82-a358-105ff804703c\",\r\n      \"receivedTime\":\"2020-06-13T22:19:31.129919015Z\",\r\n      \"deviceGroups\":[\r\n],\r\n      \"measurementType\":\"BodyWeightComposition\"\r\n   \r\n},\r\n   \"device\":{\r\n      \"id\":\"EBMTech:BC800:003-204046206948081-05\",\r\n      \"serialNumber\":\"003-204046206948494-25\",\r\n      \"IMEI\":\"900000000000003\",\r\n      \"IMSI\":\"204046206948494\",\r\n      \"manufacturer\":\"EBMTech\",\r\n      \"model\":\"BC800 3G\",\r\n      \"timezone\":\"UTC\",\r\n      \"additionalAttributes\":{\r\n         \"currentDeviceTime\":\"0.000000\",\r\n         \"deviceType\":\"BC800 3G\",\r\n         \"deviceVer\":\"V1.0\"\r\n}\r\n   \r\n},\r\n   \"measurements\":{\r\n      \"bodyComposition\":{\r\n         \"value\":520,\r\n         \"unit\":\"Ω\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"bodyWeight\":{\r\n         \"value\":62.1,\r\n         \"unit\":\"kg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"timestamp\":\"2020-06-13T20:19:31.129919127Z\"\r\n   \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medisante/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medisante",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Medisanté device details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/MEDISANTE/EBMTech:BC800:003-204046206948081-05\n",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"MEDISANTE",
+										"EBMTech:BC800:003-204046206948081-05\n"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Simulate Medisanté data PUSHed from devices: BLOOD PRESSURE",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"metadata\":{\r\n      \"correlationId\":\"eb6054ab-dcdf-48ef-a9fe-98edd0a3d78a\",\r\n      \"receivedTime\":\"2020-06-14T19:34:49.791501748Z\",\r\n      \"deviceGroups\":[\r\n         \"cf_mplus_care\"\r\n      \r\n],\r\n      \"measurementType\":\"BloodPressure\"\r\n   \r\n},\r\n   \"device\":{\r\n      \"id\":\"TaiDoc:BP800:001-3261717440001693-45\",\r\n      \"serialNumber\":\"001-3261717440001693-45\",\r\n      \"IMEI\":\"358173054446615\",\r\n      \"IMSI\":\"204046206994320\",\r\n      \"manufacturer\":\"TaiDoc\",\r\n      \"model\":\"BP800 3G\",\r\n      \"timezone\":\"Europe/Zurich\"\r\n   \r\n},\r\n   \"measurements\":{\r\n      \"annotations\":{\r\n         \"averageMeasurement\":\"false\",\r\n         \"irregularHeartBeat\":\"false\"\r\n      \r\n},\r\n      \"diastolicBloodPressure\":{\r\n         \"value\":100,\r\n         \"unit\":\"mmHg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"meanBloodPressure\":{\r\n         \"value\":100,\r\n         \"unit\":\"mmHg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"pulse\":{\r\n         \"value\":105,\r\n         \"unit\":\"bpm\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"systolicBloodPressure\":{\r\n         \"value\":130,\r\n         \"unit\":\"mmHg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"timestamp\":\"2020-06-01T22:45:00+02:00\"\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medisante/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medisante",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Simulate Medisanté data PUSHed from devices: BLOOD GLUCOSE",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"metadata\":{\r\n      \"correlationId\":\"eb6054ab-dcdf-48ef-a9fe-98edd0a3d78a\",\r\n      \"receivedTime\":\"2020-06-14T19:34:49.791501748Z\",\r\n      \"deviceGroups\":[\r\n         \"cf_mplus_care\"\r\n      \r\n],\r\n      \"measurementType\":\"BloodPressure\"\r\n   \r\n},\r\n   \"device\":{\r\n      \"id\":\"TaiDoc:BP800:001-3261717440001693-45\",\r\n      \"serialNumber\":\"001-3261717440001693-45\",\r\n      \"IMEI\":\"358173054446615\",\r\n      \"IMSI\":\"204046206994320\",\r\n      \"manufacturer\":\"TaiDoc\",\r\n      \"model\":\"BP800 3G\",\r\n      \"timezone\":\"Europe/Zurich\"\r\n   \r\n},\r\n   \"measurements\":{\r\n      \"annotations\":{\r\n         \"averageMeasurement\":\"false\",\r\n         \"irregularHeartBeat\":\"false\"\r\n      \r\n},\r\n      \"diastolicBloodPressure\":{\r\n         \"value\":100,\r\n         \"unit\":\"mmHg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"meanBloodPressure\":{\r\n         \"value\":100,\r\n         \"unit\":\"mmHg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"pulse\":{\r\n         \"value\":105,\r\n         \"unit\":\"bpm\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"systolicBloodPressure\":{\r\n         \"value\":130,\r\n         \"unit\":\"mmHg\",\r\n         \"isInRange\":true\r\n      \r\n},\r\n      \"timestamp\":\"2020-06-01T22:45:00+02:00\"\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medisante/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medisante",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Medisanté (external API)",
+					"item": [
+						{
+							"name": "Get device details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "{{medisanteAccessToken}}",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{medisanteBaseURL}}/v1/devices/TaiDoc:BP800:001-3261717440001693-45",
+									"host": [
+										"{{medisanteBaseURL}}"
+									],
+									"path": [
+										"v1",
+										"devices",
+										"TaiDoc:BP800:001-3261717440001693-45"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Medixine",
+					"item": [
+						{
+							"name": "Create Medixine BPM device",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"medixineDeviceId\": \"btsuddpxnhu204zpf23tbdkx3pg0569o\",\r\n  \"organizationId\": \"sw0oezp0eucbvd78zmnp0um03j1x7ctd\",\r\n  \"deviceTypeOID\": \"7blgzrya0hdzbztbnjtj16ef2wjn9f9z\",\r\n  \"deviceTypeName\": \"AnD_UA-651BLE\",\r\n  \"deviceTypeNameTitle\": \"Blood Pressure Monitor\",\r\n  \"serialNumber\": \"5200100255\",\r\n  \"bluetoothMac\": \"4C:24:98:0A:ED:EB\",\r\n  \"state\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medixine/new",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medixine",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unassigned devices",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medixine/unassigned",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medixine",
+										"unassigned"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get available hubs",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medixine/hubs/available/5f16daf11154e3557c0b2148",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medixine",
+										"hubs",
+										"available",
+										"5f16daf11154e3557c0b2148"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Assign Medixine device",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"provider\": \"MEDIXINE\",\r\n   \"deviceId\": \"5200100255\",\r\n   \"patientId\": \"odg1k05xr17cabguh996ol5o1bfz8ezq\",\r\n   \"hubOID\": \"9p0lzwpl379wnr7rtdu88vxh0lwg34nn\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/assign",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"assign"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test Medixine API",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medixine/test",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medixine",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Medixine Thermometer device",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"medixineDeviceId\": \"ppgmk68xcgud55k9m6byp24gs4ayyg98\",\r\n  \"organizationId\": \"sw0oezp0eucbvd78zmnp0um03j1x7ctd\",\r\n  \"deviceTypeOID\": \"gdtezb7gnaksi00zam62n6dpys51v57s\",\r\n  \"deviceTypeName\": \"AnD_UT-201BLE-A\",\r\n  \"deviceTypeNameTitle\": \"Thermometer\",\r\n  \"serialNumber\": \"5170200201\",\r\n  \"bluetoothMac\": \"C8:FD:19:3A:D0:25\",\r\n  \"state\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medixine/new",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medixine",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Medixine devices and hubs",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/devices/medixine/deleteAll",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"medixine",
+										"deleteAll"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Medixine suite (external API)",
+					"item": [
+						{
+							"name": "Get DeviceHubAssignment",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-RequestId",
+										"value": "{{medixineRequestId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Timestamp",
+										"value": "{{medixineTimestamp}}",
+										"type": "text"
+									},
+									{
+										"key": "X-ApplicationId",
+										"value": "{{medixineApplicationId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Authcode",
+										"value": "{{medixineAuthcode}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Culture",
+										"value": "{{medixineCulture}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{medixineBaseURL}}/api/v1/about/test",
+									"host": [
+										"{{medixineBaseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"about",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get DeviceHubAssignment",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-RequestId",
+										"value": "{{medixineRequestId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Timestamp",
+										"value": "{{medixineTimestamp}}",
+										"type": "text"
+									},
+									{
+										"key": "X-ApplicationId",
+										"value": "{{medixineApplicationId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Authcode",
+										"value": "{{medixineAuthcode}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Culture",
+										"value": "{{medixineCulture}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{medixineBaseURL}}/api/v1/DeviceHubAssignment/GetHubAssignmentByHubOID/sw0oezp0eucbvd78zmnp0um03j1x7ctd/9p0lzwpl379wnr7rtdu88vxh0lwg34nn",
+									"host": [
+										"{{medixineBaseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"DeviceHubAssignment",
+										"GetHubAssignmentByHubOID",
+										"sw0oezp0eucbvd78zmnp0um03j1x7ctd",
+										"9p0lzwpl379wnr7rtdu88vxh0lwg34nn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Test Medixine API",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-RequestId",
+										"value": "{{medixineRequestId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Timestamp",
+										"value": "{{medixineTimestamp}}",
+										"type": "text"
+									},
+									{
+										"key": "X-ApplicationId",
+										"value": "{{medixineApplicationId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Authcode",
+										"value": "{{medixineAuthcode}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Culture",
+										"value": "{{medixineCulture}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{medixineBaseURL}}/api/v1/about/test",
+									"host": [
+										"{{medixineBaseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"about",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get DeviceHub",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-RequestId",
+										"value": "{{medixineRequestId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Timestamp",
+										"value": "{{medixineTimestamp}}",
+										"type": "text"
+									},
+									{
+										"key": "X-ApplicationId",
+										"value": "{{medixineApplicationId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Authcode",
+										"value": "{{medixineAuthcode}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Culture",
+										"value": "{{medixineCulture}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{medixineBaseURL}}/api/v1/DeviceHub/GetById/9p0lzwpl379wnr7rtdu88vxh0lwg34nn",
+									"host": [
+										"{{medixineBaseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"DeviceHub",
+										"GetById",
+										"9p0lzwpl379wnr7rtdu88vxh0lwg34nn"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get devices",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-RequestId",
+										"value": "{{medixineRequestId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Timestamp",
+										"value": "{{medixineTimestamp}}",
+										"type": "text"
+									},
+									{
+										"key": "X-ApplicationId",
+										"value": "{{medixineApplicationId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Authcode",
+										"value": "{{medixineAuthcode}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Culture",
+										"value": "{{medixineCulture}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{medixineBaseURL}}/api/v1/Device/GetCollection?keywords={keywords}&sortBy={sortBy}&sortAsc={sortAsc}&pageSize={pageSize}&page={page}",
+									"host": [
+										"{{medixineBaseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Device",
+										"GetCollection"
+									],
+									"query": [
+										{
+											"key": "keywords",
+											"value": "{keywords}"
+										},
+										{
+											"key": "sortBy",
+											"value": "{sortBy}"
+										},
+										{
+											"key": "sortAsc",
+											"value": "{sortAsc}"
+										},
+										{
+											"key": "pageSize",
+											"value": "{pageSize}"
+										},
+										{
+											"key": "page",
+											"value": "{page}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update device",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-RequestId",
+										"value": "{{medixineRequestId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Timestamp",
+										"value": "{{medixineTimestamp}}",
+										"type": "text"
+									},
+									{
+										"key": "X-ApplicationId",
+										"value": "{{medixineApplicationId}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Authcode",
+										"value": "{{medixineAuthcode}}",
+										"type": "text"
+									},
+									{
+										"key": "X-Culture",
+										"value": "{{medixineCulture}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            //\"OID\": \"btsuddpxnhu204zpf23tbdkx3pg0569o\",\r\n            \"OrganizationId\": \"sw0oezp0eucbvd78zmnp0um03j1x7ctd\",\r\n            \"DeviceHubOID\": \"9p0lzwpl379wnr7rtdu88vxh0lwg34nn\",\r\n            //\"DeviceTypeOID\": \"7blgzrya0hdzbztbnjtj16ef2wjn9f9z\",\r\n            //\"DeviceTypeName\": \"AnD_UA-651BLE\",\r\n            //\"DeviceTypeNameTitle\": \"Blood Pressure Monitor\",\r\n            \"SerialNumber\": \"5200100255\"\r\n            //\"BTMac\": \"4C:24:98:0A:ED:EB\",\r\n            //\"State\": \"Active\"\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{medixineBaseURL}}/api/v1/Device/btsuddpxnhu204zpf23tbdkx3pg0569o",
+									"host": [
+										"{{medixineBaseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"Device",
+										"btsuddpxnhu204zpf23tbdkx3pg0569o"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Targets",
+					"item": [
+						{
+							"name": "Save targets",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"systolicMin\": 5,\r\n    \"systolicMax\": 6,\r\n    \"diastolicMin\": 7,\r\n    \"diastolicMax\": 8,\r\n    \"bloodGlucoseMin\": 9,\r\n    \"bloodGlucoseMax\": 10,\r\n    \"weightMin\": 11,\r\n    \"weightMax\": 12,\r\n    \"temperatureMin\": 13,\r\n    \"temperatureMax\": 14\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/v1/targets/save",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"targets",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get targets",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/v1/targets/get",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"targets",
+										"get"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get all medical devices",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/devices/getAll",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"devices",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Patient details",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/patients/5eda11a8e92b5eb572009777",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"5eda11a8e92b5eb572009777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patients",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{username}}/api/v1/patients/5eda11a8e92b5eb572009777",
+							"host": [
+								"{{username}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"5eda11a8e92b5eb572009777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create patient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/patients/5eda11a8e92b5eb572009777",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"5eda11a8e92b5eb572009777"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}

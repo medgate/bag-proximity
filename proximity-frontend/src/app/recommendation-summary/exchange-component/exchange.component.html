@@ -1,0 +1,9 @@
+<mat-card class="exchange">
+  <mat-card-header>
+      <mat-card-title [innerHTML]="questionNode.question"></mat-card-title>
+      <mat-card-content [ngClass]="getSeverityClass(answer.id)"
+                        [innerHTML]="answer.text">
+      </mat-card-content>
+      <mat-card-subtitle [innerHTML]="questionNode.description"></mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

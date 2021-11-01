@@ -1,0 +1,94 @@
+{
+  "header": {
+    "title": "Guide SwissCovid"
+  },
+  "footer": {
+    "office": "©2020 Office fédéral de la santé publique OFSP",
+    "legal": "Bases légales",
+    "imprint": "Empreinte",
+    "link": {
+      "office": "https://www.bag.admin.ch/bag/fr/home.html",
+      "legal": "https://ofsp-coronavirus.ch/bases-legales/",
+      "imprint": "https://ofsp-coronavirus.ch/empreinte/"
+    }
+  },
+  "errors": {
+    "title": "Guide SwissCovid",
+    "back": "Retour",
+    "notFound": "Page inexistante",
+    "forbidden": "Interdit",
+    "unexpected": "Une erreur inattendue s’est produite. Veuillez réessayer, s’il vous plaît."
+  },
+  "intro": {
+    "title": "Guide SwissCovid",
+    "description": "Répondez à toutes les questions du guide. Vous serez ensuite adressé au service compétent.",
+    "start": "Démarrer le test"
+  },
+  "screening": {
+    "next": "Suivant",
+    "back": "Retour",
+    "restart": "Répéter le test",
+    "bag": "Site web de l’OFSP"
+  },
+  "recommendation": {
+    "title": "Identifiant infoline :",
+    "description": "Veuillez indiquer l’identifiant ci-dessus lorsque vous appelez l’infoline afin que nous puissions accéder à vos réponses et gagner du temps.",
+    "descriptionEmail": "Veuillez indiquer l'identifiant ci-dessus dans votre e-mail afin que nous puissions accéder à vos réponses et gagner du temps."
+  },
+  "summary": {
+    "title": "Résumé des informations contenues dans le guide SwissCovid",
+    "reset": "Réinitialiser",
+    "recommendation": "Recommendation",
+    "exchanges": "Échanges",
+    "recommendationCode": {
+      "label": "Identifiant infoline",
+      "required": "Le Identifiant infoline est requis",
+      "invalid": "Le Identifiant infoline doit être alphanumérique et long de 4 caractères",
+      "notFound": "Aucun échange trouvé pour le Identifiant infoline donné",
+      "expired": "Identifiant infoline expiré : le test a plus de 24 heures"
+    }
+  },
+  "profile": {
+    "title": "Données personnelles",
+    "description": "Indiquez votre sexe, votre âge et votre canton. En fonction du résultat, l’adresse du service cantonal compétent s’affichera.",
+    "button": "Suivant",
+    "canton": {
+      "label": "Canton",
+      "required": "Le canton est requis.",
+      "invalid": "Vous devez saisir le nom du canton."
+    },
+    "age": {
+      "label": "Âge",
+      "required": "Indiquez votre âge.",
+      "invalid": "Vous devez saisir un âge entre 0 et 120 ans.",
+      "years": "ans"
+    },
+    "gender": {
+      "label": "Sexe",
+      "male": "Masculin",
+      "female": "Féminin",
+      "other": "Autre",
+      "required": "Le sexe est requis."
+    },
+    "contactDate": {
+      "label": "Date des contacts",
+      "notAvailable": "Aucune date de contact disponible.",
+      "question": "Souhaitez-vous partager les dates de contact ci-dessus?",
+      "description": "Si un appel à la hotline est nécessaire, cela permettra à nos collaborateurs de vous aider plus rapidement.",
+      "yes": "Oui",
+      "no": "Non"
+    }
+  },
+  "hearingImpaired": {
+    "title": "Soutien aux personnes malentendantes",
+    "description": "Sur mandat de l'OFSP, Medgate soutient les personnes malentendantes par courrier électronique.",
+    "email": "covid-support@medgate.ch"
+  },
+  "language": {
+    "label": "Langue",
+    "german": "Deutsch",
+    "french": "Français",
+    "italian": "Italiano",
+    "english": "English"
+  }
+}

@@ -1,0 +1,20 @@
+<div [ngClass]="getSeverityClass(recommendation.severity)">
+  <div class="severity-content">
+    <p [innerHTML]="recommendation.title">
+    </p>
+  </div>
+</div>
+
+<main>
+  <p [innerHTML]="recommendation.description">
+  </p>
+
+  <div class="button-area">
+    <button mat-flat-button
+            color="primary"
+            class="larger-button"
+            (click)="resetSummary()">
+      {{ 'summary.reset' | translate }}
+    </button>
+  </div>
+</main>

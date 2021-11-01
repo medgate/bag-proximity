@@ -1,0 +1,1014 @@
+{
+	"info": {
+		"_postman_id": "b4f8c3da-cb6c-4c50-8003-fd18991c2156",
+		"name": "BAG Coronapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Actuator",
+			"item": [
+				{
+					"name": "Health",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d04027e-eaf0-4719-9825-fcc97e269be7",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{actuatorUrl}}/actuator/health",
+							"host": [
+								"{{actuatorUrl}}"
+							],
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "App is UP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/actuator/health",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"actuator",
+										"health"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.spring-boot.actuator.v3+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jan 2020 11:16:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"UP\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d04027e-eaf0-4719-9825-fcc97e269be7",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{actuatorUrl}}/actuator/info",
+							"host": [
+								"{{actuatorUrl}}"
+							],
+							"path": [
+								"actuator",
+								"info"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "App Info",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/actuator/info",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"actuator",
+										"info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/vnd.spring-boot.actuator.v3+json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 15 Jan 2020 11:16:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"git\": {\n        \"branch\": \"develop\",\n        \"commit\": {\n            \"id\": \"a72e7e4\",\n            \"time\": \"2020-01-14T13:45:55Z\"\n        }\n    },\n    \"build\": {\n        \"artifact\": \"rol-helpdesk-backend\",\n        \"name\": \"rol-helpdesk-backend\",\n        \"time\": \"2020-01-15T11:14:53.339Z\",\n        \"version\": \"0.1.0-SNAPSHOT\",\n        \"group\": \"com.rolex.helpdesk\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "685fe89f-af54-4962-8eb7-7da0795c2c23",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5dd0e453-da25-4fae-af6c-3fdd1b01a056",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Screening",
+			"item": [
+				{
+					"name": "Retrieve initial question",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "65313edc-d58f-4b26-9d5d-82beb9b9bf7e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{backendUrl}}/api/v1/screening/answers/first?lang=\"fr\"",
+							"host": [
+								"{{backendUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"screening",
+								"answers",
+								"first"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "\"fr\""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve initial question",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{backendUrl}}/api/v1/screening/answers/first?lang=\"fr\"",
+									"host": [
+										"{{backendUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"screening",
+										"answers",
+										"first"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "\"fr\""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "accept-encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Mar 2020 17:24:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"v1\",\n    \"initialNodeId\": \"n_0\",\n    \"node\": {\n        \"question\": \"Haben Sie Husten?\",\n        \"description\": \"\",\n        \"answers\": [\n            {\n                \"id\": \"ANSWER_YES\",\n                \"type\": \"NODE\",\n                \"text\": \"Ja\",\n                \"nextNodeId\": \"n_1\",\n                \"recommendation\": null\n            },\n            {\n                \"id\": \"ANSWER_NO\",\n                \"type\": \"NODE\",\n                \"text\": \"Nein\",\n                \"nextNodeId\": \"n_1\",\n                \"recommendation\": null\n            },\n            {\n                \"id\": \"ANSWER_DONT_KNOW\",\n                \"type\": \"NODE\",\n                \"text\": \"Ich weiß es nicht\",\n                \"nextNodeId\": \"n_1\",\n                \"recommendation\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Answer and retrieve next question",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "65313edc-d58f-4b26-9d5d-82beb9b9bf7e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 21,\n        \"gender\": \"MALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"nodeIds\": [\n        \"n_0\",\n        \"n_1\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendUrl}}/api/v1/screening/answers",
+							"host": [
+								"{{backendUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"screening",
+								"answers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Answer and retrieve next question",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 21,\n        \"gender\": \"MALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"nodeIds\": [\n        \"n_0\",\n        \"n_1\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{backendUrl}}/api/v1/screening/answers",
+									"host": [
+										"{{backendUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"screening",
+										"answers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "accept-encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Mar 2020 17:23:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"question\": \"***Avez-vous un essoufflement ou des difficultés respiratoires ?\",\n    \"description\": \"\",\n    \"answers\": [\n        {\n            \"id\": \"ANSWER_YES\",\n            \"type\": \"NODE\",\n            \"text\": \"Oui\",\n            \"nextNodeId\": \"n_2\",\n            \"recommendation\": null\n        },\n        {\n            \"id\": \"ANSWER_NO\",\n            \"type\": \"NODE\",\n            \"text\": \"Non\",\n            \"nextNodeId\": \"n_2\",\n            \"recommendation\": null\n        },\n        {\n            \"id\": \"ANSWER_DONT_KNOW\",\n            \"type\": \"NODE\",\n            \"text\": \"Je ne sais pas\",\n            \"nextNodeId\": \"n_2\",\n            \"recommendation\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Answer and retrieve final recommendation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "65313edc-d58f-4b26-9d5d-82beb9b9bf7e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 12,\n        \"gender\": \"FEMALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"nodeIds\": [\n        \"n_0\",\n        \"n_1\",\n        \"n_2\",\n        \"n_3_1\",\n        \"n_4_1\",\n        \"n_5_1\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendUrl}}/api/v1/screening/answers",
+							"host": [
+								"{{backendUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"screening",
+								"answers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Answer and retrieve final recommendation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 12,\n        \"gender\": \"FEMALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"nodeIds\": [\n        \"n_0\",\n        \"n_1\",\n        \"n_2\",\n        \"n_3_1\",\n        \"n_4_1\",\n        \"n_5_1\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{backendUrl}}/api/v1/screening/answers",
+									"host": [
+										"{{backendUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"screening",
+										"answers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "accept-encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 09 Mar 2020 17:24:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"question\": \"***Souffrez-vous de diabète, d'hypertension artérielle, de cancer ou d'une maladie pulmonaire chronique ou avez-vous plus de 60 ans?\",\n    \"description\": \"\",\n    \"answers\": [\n        {\n            \"id\": \"ANSWER_YES\",\n            \"type\": \"RECOMMENDATION\",\n            \"text\": \"Oui\",\n            \"nextNodeId\": \"\",\n            \"recommendation\": {\n                \"id\": \"RECOMMENDATION_SUSPECTED_WITH_FEVER_LAB\",\n                \"title\": \"\",\n                \"description\": \"\",\n                \"severity\": \"HIGH\"\n            }\n        },\n        {\n            \"id\": \"ANSWER_NO\",\n            \"type\": \"RECOMMENDATION\",\n            \"text\": \"Non\",\n            \"nextNodeId\": \"\",\n            \"recommendation\": {\n                \"id\": \"RECOMMENDATION_SUSPECTED_WITH_FEVER\",\n                \"title\": \"\",\n                \"description\": \"\",\n                \"severity\": \"HIGH\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Send completed answers and recommendation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "65313edc-d58f-4b26-9d5d-82beb9b9bf7e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 23,\n        \"gender\": \"FEMALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"exchanges\": [\n        {\n            \"questionId\": \"QUESTION_RISK\",\n            \"answerId\": \"ANSWER_YES\"\n        },\n        {\n            \"questionId\": \"QUESTION_COUGH_RISK\",\n            \"answerId\": \"ANSWER_NO\"\n        },\n        {\n            \"questionId\": \"QUESTION_FEVER_RISK\",\n            \"answerId\": \"ANSWER_NO\"\n        },\n        {\n            \"questionId\": \"QUESTION_CONTACT_RISK\",\n            \"answerId\": \"ANSWER_YES\"\n        }\n    ],\n    \"recommendationId\": \"RECOMMENDATION_SUSPECTED_WITHOUT_FEVER_RISK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendUrl}}/api/v1/screening/answers/completed",
+							"host": [
+								"{{backendUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"screening",
+								"answers",
+								"completed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Answer and retrieve final recommendation Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 12,\n        \"gender\": \"FEMALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"answerIds\": [\n        \"ANSWER_YES\",\n        \"ANSWER_YES\",\n        \"ANSWER_YES\",\n        \"ANSWER_NO\",\n        \"ANSWER_YES\",\n        \"ANSWER_YES\"\n    ],\n    \"recommendationId\": \"RECOMMENDATION_SUSPECTED_WITH_FEVER_LAB\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{backendUrl}}/api/v1/screening/answers/completed",
+									"host": [
+										"{{backendUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"screening",
+										"answers",
+										"completed"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "accept-encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 10 Mar 2020 07:57:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"version\": \"v1\",\n    \"profile\": {\n        \"age\": 12,\n        \"gender\": \"FEMALE\",\n        \"canton\": \"GE\",\n        \"language\": \"fr\"\n    },\n    \"answerIds\": [\n        \"ANSWER_YES\",\n        \"ANSWER_YES\",\n        \"ANSWER_YES\",\n        \"ANSWER_NO\",\n        \"ANSWER_YES\",\n        \"ANSWER_YES\"\n    ],\n    \"recommendationId\": \"RECOMMENDATION_SUSPECTED_WITH_FEVER_LAB\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d28711a6-d716-47de-8564-dcff399c0bd7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "287d60c7-17b4-4817-9ac7-e39531584324",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Export (DEPRECATED)",
+			"item": [
+				{
+					"name": "Export latest user answers (DEPRECATED)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{exporter}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{backendUrl}}/api/v1/export/screening/answers",
+							"host": [
+								"{{backendUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"export",
+								"screening",
+								"answers"
+							]
+						},
+						"description": "The whole export functionality has been deprecated in v2.2.0 in profit of PowerBI."
+					},
+					"response": [
+						{
+							"name": "Export latest user answers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{backendUrl}}/api/v1/export/screening/answers",
+									"host": [
+										"{{backendUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"export",
+										"screening",
+										"answers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "vary",
+									"value": "accept-encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Apr 2020 13:35:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Export started\",\n    \"startedAt\": \"2020-04-01T13:35:21.975415Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Export user answers chunk (DEPRECATED)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{exporter}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"version\": \"v1\",\n\t\"since\": \"2020-03-20T20:55:00Z\",\n\t\"until\": \"2020-03-20T21:55:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backendUrl}}/api/v1/export/screening/answers/chunks",
+							"host": [
+								"{{backendUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"export",
+								"screening",
+								"answers",
+								"chunks"
+							]
+						},
+						"description": "The whole export functionality has been deprecated in v2.2.0 in profit of PowerBI."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fa6c6d1f-d596-4491-8537-83af85d112cc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "73d71167-4bf4-451d-aa03-bd6bce24a5e6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

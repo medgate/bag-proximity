@@ -1,0 +1,94 @@
+{
+  "header": {
+    "title": "SwissCovid guide"
+  },
+  "footer": {
+    "office": "©2020 Federal Office of Public Health FOPH",
+    "legal": "Legal basis",
+    "imprint": "Imprint",
+    "link": {
+      "office": "https://www.bag.admin.ch/bag/en/home.html",
+      "legal": "https://foph-coronavirus.ch/legal-basis/",
+      "imprint": "https://foph-coronavirus.ch/imprint/"
+    }
+  },
+  "errors": {
+    "title": "SwissCovid guide",
+    "back": "Back",
+    "notFound": "Page not found",
+    "forbidden": "Forbidden",
+    "unexpected": "An unexpected error has occurred. Please retry."
+  },
+  "intro": {
+    "title": "SwissCovid guide",
+    "description": "Answer all questions in the guide. You will then be referred to the responsible authority.",
+    "start": "Start check"
+  },
+  "screening": {
+    "next": "Next",
+    "back": "Back",
+    "restart": "Repeat check",
+    "bag": "Website of the FOPH"
+  },
+  "recommendation": {
+    "title": "Hotline ID:",
+    "description": "Please state the ID above when you call the hotline so that we are able to access your answers and save time.",
+    "descriptionEmail": "Please state the ID above in your email so that we are able to access your answers and save time."
+  },
+  "summary": {
+    "title": "Summary of the information in the SwissCovid guide",
+    "reset": "Reset",
+    "recommendation": "Recommendation",
+    "exchanges": "Exchanges",
+    "recommendationCode": {
+      "label": "Hotline ID",
+      "required": "Hotline ID is required",
+      "invalid": "Hotline ID must be alphanumeric and 4 characters long",
+      "notFound": "No exchanges found for the given Hotline ID",
+      "expired": "Hotline ID expired: the screening is older than 24 hours"
+    }
+  },
+  "profile": {
+    "title": "Personal details",
+    "description": "Enter your gender, age and canton. Depending on the result, you will be shown the cantonal contact addresses relevant to you.",
+    "button": "Next",
+    "canton": {
+      "label": "Canton",
+      "required": "Canton is required.",
+      "invalid": "Please write the full name of your canton."
+    },
+    "age": {
+      "label": "Age",
+      "required": "Specify your age.",
+      "invalid": "You must enter an age between 0 and 120.",
+      "years": "years"
+    },
+    "gender": {
+      "label": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "required": "Gender is required."
+    },
+    "contactDate": {
+      "label": "Contact dates",
+      "notAvailable": "No contact dates available.",
+      "question": "Do you want to share the above contact dates?",
+      "description": "In case a call to the hotline is necessary, this will allow our collaborators to help you faster.",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "hearingImpaired": {
+    "title": "Assistance for hearing impaired people",
+    "description": "On behalf of the FOPH, Medgate supports hearing impaired people via email.",
+    "email": "covid-support@medgate.ch"
+  },
+  "language": {
+    "label": "Language",
+    "german": "Deutsch",
+    "french": "Français",
+    "italian": "Italiano",
+    "english": "English"
+  }
+}

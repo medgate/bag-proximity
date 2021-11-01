@@ -1,0 +1,20 @@
+.exchange {
+  display: flex;
+  margin: 10px 0;
+
+  .answer-yes {
+    color: #dc0018;
+  }
+
+  .answer-idk {
+    color: #ffff00;
+  }
+
+  .answer-no {
+    color: #00ff00;
+  }
+
+  mat-card-content {
+    min-width: 50px;
+  }
+}

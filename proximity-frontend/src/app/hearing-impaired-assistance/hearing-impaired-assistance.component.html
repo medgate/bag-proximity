@@ -1,0 +1,41 @@
+<bag-header-intro></bag-header-intro>
+
+<main class="intro">
+  <div class="main-title">
+    <h1>{{ 'hearingImpaired.title' | translate }}</h1>
+    <h3>{{ 'hearingImpaired.description' | translate }}</h3>
+
+    <p *ngIf="recommendationCode">
+      <strong>
+        {{ 'recommendation.title' | translate }}
+        <span class="big-text">{{ recommendationCode }}</span>
+      </strong><br>
+      {{ 'recommendation.descriptionEmail' | translate }}
+    </p>
+
+    <div class="link-area left-align" *ngIf="contactEmail">
+      <a mat-flat-button
+         color="primary"
+         href="{{ 'mailto:' + contactEmail }}">
+        {{ contactEmail }}
+      </a>
+    </div>
+
+    <div class="button-area">
+      <button mat-flat-button
+              color="basic"
+              class="back-bag larger-button"
+              (click)="redirectBagWebsite()">
+        {{ 'screening.bag' | translate }}
+      </button>
+      <button mat-flat-button
+              color="primary"
+              class="larger-button"
+              routerLink="/screening">
+        {{ 'screening.restart' | translate }}
+      </button>
+    </div>
+  </div>
+</main>
+
+<bag-footer></bag-footer>
